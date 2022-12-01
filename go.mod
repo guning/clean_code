@@ -1,1 +1,1 @@
-module uglydemo
+module demo

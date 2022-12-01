@@ -1,1 +1,1 @@
-package dirtydemo
+package demo
