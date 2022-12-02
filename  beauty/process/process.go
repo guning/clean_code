@@ -27,7 +27,7 @@ func (this Process) Validate() error {
 	return nil
 }
 
-func AddProcess(process *Process) (int64, error) {
+func Add(process *Process) (int64, error) {
 	if err := process.Validate(); err != nil {
 		return 0, err
 	}
