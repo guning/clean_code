@@ -1,7 +1,7 @@
 package form
 
 import (
-	"demo/ beauty/process/field"
+	"demo/clean/process/field"
 	"demo/common"
 	"demo/common/table"
 )

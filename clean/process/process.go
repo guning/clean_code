@@ -1,7 +1,7 @@
 package process
 
 import (
-	"demo/ beauty/process/form"
+	"demo/clean/process/form"
 	"demo/common"
 	"demo/common/table"
 	"errors"

@@ -1,4 +1,4 @@
-package ugly
+package mass
 
 import (
 	"bytes"

@@ -1,6 +1,6 @@
 package form
 
-import "demo/ beauty/process/field"
+import "demo/clean/process/field"
 
 type Layout struct {
 	FiledName      string
