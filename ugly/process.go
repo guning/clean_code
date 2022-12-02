@@ -10,9 +10,9 @@ import (
 )
 
 type ProcessInfo struct {
-	Name string
+	Name    string
 	BPMNXml string
-	Form []*FormLayout
+	Form    []*FormLayout
 }
 
 const (
@@ -21,8 +21,20 @@ const (
 )
 
 func AddProcess(name, bpmnxml string, form []*FormLayout) (int64, error) {
+	nodes := common.XML.UnmarshalFromString(bpmnxml)
+	if len(nodes) == 0 {
+		return 0, errors.New("流程未配置")
+	}
+	if len(name) == 0 {
+		return 0, errors.New("未配置名称")
+	}
+	if len(form) == 0 {
+		return 0, errors.New("未配置表单")
+	}
+
 	common.DB.TransactionBegin()
 
+	// 新增表单
 	formId, _ := common.DB.Insert(&table.Form{})
 
 	for _, layout := range form {

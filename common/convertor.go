@@ -4,4 +4,4 @@ type convertor interface {
 	ToIntNoError(obj interface{}) int
 }
 
-type CONVERTOR convertor
+var CONVERTOR convertor
